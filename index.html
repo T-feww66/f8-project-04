@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <!-- Emed font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +10,7 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@600;800&display=swap"
             rel="stylesheet"
         />
+
         <!-- reset css -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -91,12 +91,45 @@
             content="./assets/favicon/ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
-        <title>Lucy</title>
+        <title>Document</title>
     </head>
-    <body>
+    <body style="height: 6000px">
+        <header class="header fixed">
+            <div class="container">
+                <div class="header__inner">
+                    <img
+                        src="./assets/images/icon/logo.svg"
+                        alt="Lucy"
+                        class="header__logo"
+                    />
 
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item active">
+                                <a href="#!">Home</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!">About</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!">Services & Rates</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!">Reviews</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!">Contacts us</a>
+                            </li>
+                        </ul>
+                    </nav>
 
-        helo
-        
+                    <div class="header__cta">
+                        <a href="#!" class="header__cta-btn btn">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- script -->
+        <script src="./main.js"></script>
     </body>
 </html>
