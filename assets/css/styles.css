@@ -51,15 +51,22 @@ select {
     line-height: var(--height);
 }
 
+.btn:hover {
+    color: var(--primary-color);
+    background-color: var(--color-white);
+}
+
 /* header */
 
 .header {
+    background-color: #fffaf5;
     padding: 20px 10px 10px 10px;
 }
 
 .header.fixed {
     position: sticky;
     top: -10px;
+    z-index: 6;
 }
 
 .header__inner {
@@ -100,4 +107,122 @@ select {
 .header__cta-btn:hover {
     background-color: var(--color-word);
     color: var(--color-white);
+}
+
+.hero {
+    padding: 65px 0px;
+    margin-top: 35px;
+}
+
+.hero__inner {
+    display: flex;
+    align-items: center;
+}
+
+.hero-media {
+    position: relative;
+    padding-bottom: 94px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-media__wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    width: 388px;
+    height: 488px;
+    background-color: #fe997b;
+    border-radius: 16px;
+    border: 3px solid #fff;
+}
+
+.hero-media__small {
+    width: 186px;
+    height: 244px;
+    background-color: #faa7ad;
+    border-color: #fcdee1;
+    margin: 0 0 -58px -32px;
+}
+
+.hero-media__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: inherit;
+}
+
+.hero-media__decor {
+    position: absolute;
+    z-index: -1;
+}
+
+.hero-media__decor--left {
+    left: -58px;
+    bottom: 0;
+}
+
+.hero-media__decor--right {
+    top: 17px;
+    right: -52px;
+}
+
+.hero-list {
+    position: absolute;
+    z-index: 4;
+    left: 130px;
+    bottom: 0;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -17px 14px 68px -4px #cfae8440;
+    padding: 18px 14px;
+}
+
+.hero-list__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-list__thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #f7a70c;
+}
+
+.hero-list__thumb--blue {
+    background-color: #6597C2;
+}
+
+.hero-list__title {
+    font-family: Sora, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--color-word);
+}
+
+.hero-list__skeleton {
+    margin-top: 7px;
+    width: 118px;
+    height: 4px;
+    background: #ebecf2;
+    border-radius: 99px;
+}
+
+.hero-list__skeleton--short {
+    width: 39px;
+}
+
+.hero-list__separate {
+    margin: 20px 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-radius: 99p;
+    background-color: #ebecf2;
 }
