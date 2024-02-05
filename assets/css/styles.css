@@ -39,6 +39,7 @@ select {
 }
 
 .btn {
+    cursor: pointer;
     display: inline-block;
     text-align: center;
     min-width: 190px;
@@ -49,13 +50,30 @@ select {
     color: var(--color-white);
     font-size: 1.6rem;
     line-height: var(--height);
+    transition: all ease-in 0.25s;
 }
 
 .btn:hover {
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
     background-color: var(--color-white);
 }
 
+.section-heading {
+    font-family: Sora, sans-serif;
+    font-size: 6.6rem;
+    font-weight: 800;
+    line-height: 1.22;
+    color: var(--color-word);
+}
+
+.section-desc {
+    margin-top: 24px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+    color: #656689;
+}
 /* header */
 
 .header {
@@ -101,22 +119,23 @@ select {
     border: 1px solid #4d5287;
     background-color: var(--color-white);
     color: var(--color-word);
-    transition: all ease-in 0.25s;
 }
 
 .header__cta-btn:hover {
+    border: 1px solid #4d5287;
     background-color: var(--color-word);
     color: var(--color-white);
 }
 
 .hero {
-    padding: 65px 0px;
+    padding: 55px 0px;
     margin-top: 35px;
 }
 
 .hero__inner {
     display: flex;
     align-items: center;
+    gap: 120px;
 }
 
 .hero-media {
@@ -195,7 +214,7 @@ select {
 }
 
 .hero-list__thumb--blue {
-    background-color: #6597C2;
+    background-color: #6597c2;
 }
 
 .hero-list__title {
@@ -225,4 +244,54 @@ select {
     height: 2px;
     border-radius: 99p;
     background-color: #ebecf2;
+}
+
+/* Hero content */
+.hero__heading {
+    max-width: 100%;
+}
+.hero__desc {
+    max-width: 390px;
+}
+
+.hero-cta {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.hero-cta__btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    box-shadow: 0px 13px 26px -8px #ff5b2e6b;
+}
+
+.hero-cta__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    color: var(--primary-color);
+}
+
+.hero-cta__btn:hover .hero-cta__icon {
+    background-color: var(--primary-color);
+    color: var(--color-white);
+}
+
+.hero-cta__desc {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-word);
+    text-decoration: underline;
 }
