@@ -363,7 +363,7 @@ select {
 }
 
 .about__check-list-item::after {
-    content: url(/assets/images/icon/check.svg);
+    content: url(/assets/images/icon/check.png);
     position: absolute;
     top: 2px;
     left: 5px;
