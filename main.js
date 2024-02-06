@@ -9,3 +9,22 @@ listItem.forEach((item) => {
         this.classList.add("active");
     };
 });
+
+var listAbout = document.querySelector(".about__list");
+var itemAbout = document.querySelectorAll(".about__item");
+var infoItems = document.querySelectorAll(".about__info-item");
+itemAbout.forEach((item, index) => {
+    let infoItem = infoItems[index];
+    item.onclick = function () {
+        document
+            .querySelector(".about__item.active")
+            .classList.remove("active");
+        document
+            .querySelector(".about__info-item.active")
+            .classList.remove("active");
+
+            
+        this.classList.add("active");
+        infoItem.classList.add("active");
+    };
+});
