@@ -46,17 +46,17 @@ select {
     --height: 60px;
     height: var(--height);
     border-radius: 99px;
-    background-color: var(--primary-color);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--primary-color);
     font-size: 1.6rem;
     line-height: var(--height);
     transition: all ease-in 0.25s;
+    border: 1px solid var(--primary-color);
 }
 
 .btn:hover {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    background-color: var(--color-white);
+    color: var(--color-white);
+    background-color: var(--primary-color);
 }
 
 .section-heading {
@@ -73,6 +73,14 @@ select {
     font-weight: 400;
     line-height: 1.875;
     color: #656689;
+}
+.section-title {
+    font-family: Sora, sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #5e6085;
 }
 /* header */
 
@@ -273,10 +281,15 @@ select {
     align-items: center;
     line-height: normal;
     outline: none;
-    border: none;
-    font-size: 1.6rem;
-    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--color-white);
     box-shadow: 0px 13px 26px -8px #ff5b2e6b;
+}
+
+.hero-cta__btn:hover {
+    border: 2px solid #ff997a;
+    color: var(--primary-color);
+    background-color: var(--color-white);
 }
 
 .hero-cta__icon {
@@ -604,19 +617,11 @@ select {
     text-align: center;
 }
 
-.service__desc {
-    margin-bottom: 15px;
-    font-family: Sora, sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1;
-    color: #5e6085;
-}
-
 .service__body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     padding-top: 71px;
+    column-gap: 70px;
 }
 
 .service-card {
@@ -681,8 +686,7 @@ select {
 
 .service__media {
     position: relative;
-    margin: 17px auto 0;
-    width: 440px;
+    margin-top: 17px;
 }
 
 .service__media::after {
@@ -700,22 +704,129 @@ select {
 
 .service__media-img {
     position: relative;
+    width: 100%;
     display: block;
     z-index: 5;
-    width: 100%;
 }
 
 .service__cta {
     margin-top: 45px;
     width: 214px;
     --height: 56px;
-    border: 1px solid #ff997a;
-    background-color: var(--color-white);
-    color: var(--primary-color);
 }
 
 .service__cta:hover {
-    background-color: var(--primary-color);
-    color: var(--color-white);
     box-shadow: 0px 13px 26px -8px #ff5b2e6b;
+}
+
+/* staff */
+.staff {
+    padding: 65px 0;
+    margin-top: 65px;
+}
+
+.staff__inner {
+    text-align: center;
+}
+
+.staff__list {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 35px;
+}
+
+.staff-item {
+    text-align: center;
+}
+
+.staff-item:nth-child(4) .staff-item__thumb::before {
+    background-image: url(../images/icon/staff-decor-04.png);
+}
+
+.staff-item__thumb {
+    margin: 0 16px;
+    position: relative;
+    border-radius: 130px;
+}
+
+/* item thumb before */
+.staff-item__thumb::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 32px);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: -16px;
+}
+
+.staff-item:nth-child(odd) .staff-item__thumb::before {
+    background-position: bottom;
+}
+
+.staff-item:nth-child(1) .staff-item__thumb::before {
+    background-image: url(../images/icon/staff-decor-01.png);
+}
+
+.staff-item:nth-child(2) .staff-item__thumb::before {
+    background-image: url(../images/icon/staff-decor-02.png);
+}
+
+.staff-item:nth-child(3) .staff-item__thumb::before {
+    background-image: url(../images/icon/staff-decor-03.png);
+}
+
+/* item thumb after */
+.staff-item__thumb::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 94%;
+    border-radius: inherit;
+    background: #90ccff;
+}
+
+.staff-item:nth-child(2) .staff-item__thumb::after {
+    background: #ff997e;
+}
+
+.staff-item:nth-child(3) .staff-item__thumb::after {
+    background: #fabf3e;
+}
+
+.staff-item:nth-child(4) .staff-item__thumb::after {
+    background-color: #5bd6e2;
+}
+.staff-item__img {
+    display: block;
+    border-radius: inherit;
+    width: 100%;
+    object-fit: cover;
+}
+
+.staff__job {
+    margin-top: 34px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #656689;
+}
+
+.staff__name {
+    margin-top: 14px;
+    font-family: Sora, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-word);
+}
+
+.staff__btn {
+    margin-top: 48px;
+    --height: 56px;
+    min-width: 193px;
 }
