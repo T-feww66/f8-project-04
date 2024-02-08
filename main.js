@@ -23,8 +23,26 @@ itemAbout.forEach((item, index) => {
             .querySelector(".about__info-item.active")
             .classList.remove("active");
 
-            
         this.classList.add("active");
         infoItem.classList.add("active");
+    };
+});
+
+//btn
+var priceBtnList = document.querySelector(".price-sale__wrap");
+var priceBtnItem = document.querySelectorAll(".price-sale__item");
+var priceList = document.querySelectorAll(".price__list");
+priceBtnItem.forEach((item, index) => {
+    let priceLitsItem = priceList[index];
+    item.onclick = function () {
+        document
+            .querySelector(".price-sale__item.active")
+            .classList.remove("active");
+        document
+            .querySelector(".price__list.active")
+            .classList.remove("active");
+
+        this.classList.add("active");
+        priceLitsItem.classList.add("active");
     };
 });
