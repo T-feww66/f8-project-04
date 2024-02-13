@@ -46,3 +46,36 @@ priceBtnItem.forEach((item, index) => {
         priceLitsItem.classList.add("active");
     };
 });
+
+// slider
+var reviewList = document.querySelector(".review__list");
+var reviewItems = document.querySelectorAll(".review-item");
+var prev = document.querySelector(".review__prev");
+var next = document.querySelector(".review__next");
+var dot = document.querySelectorAll(".review__dot");
+var active = 0;
+var lenght = reviewItems.length - 1;
+next.onclick = function () {
+    if (active + 1 > lenght) {
+        active = 0;
+    } else {
+        active++;
+    }
+    reloadSlider();
+};
+
+prev.onclick = function () {
+    if (active - 1 < 0) {
+        active = lenght;
+    } else {
+        active--;
+    }
+    reloadSlider();
+};
+
+function reloadSlider() {
+    let checkLeft = reviewItems[active].offsetWidth;
+    reviewList.style.transform = `translateX(${-checkLeft * active}px)`;
+    document.querySelector(".review__dot.active").classList.remove("active");
+    dot[active].classList.add("active");
+}
